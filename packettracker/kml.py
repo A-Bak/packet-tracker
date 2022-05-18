@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
-from typing import Any, List
+from typing import Any
 
-from packettracker.packet import Packet
+from packettracker.packet import Packet, PacketFile
 
 
 
@@ -15,17 +15,18 @@ class KMLEncoder(ABC):
     @classmethod
     @abstractmethod
     def encode(cls, object: Any) -> str:
+        """ Returns a string with the KML representation of the object. """
         ...
 
 
-class PacketKMLEncoder(KMLEncoder):
+class PacketFileKMLEncoder(KMLEncoder):
     
     @classmethod
-    def encode(cls, packet_list: List[Packet]) -> str:
+    def encode(cls, packet_file: PacketFile) -> str:
         
         kml_string = cls.kml_header()
         
-        for packet in packet_list:
+        for packet in packet_file.packets:
             kml_string += cls.encode_packet(packet)
             
         return kml_string + cls.kml_footer()

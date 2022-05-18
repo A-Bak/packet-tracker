@@ -16,6 +16,7 @@ class Location:
 class IP:
     
     address: str    
+    is_private: bool
     location: Location = field(init=False, default=None)
     
 
@@ -28,6 +29,7 @@ class PublicIPAddressAPI(ABC):
     @classmethod
     @abstractmethod
     async def get_public_ip(cls) -> IP:
+        """ Return the public IP address of the local network. """
         ...
         
 
@@ -41,6 +43,6 @@ class IPInfoAPI(PublicIPAddressAPI):
         if response.status_code != 200:
             raise StatusCodeError('Failed to retrieve public ip information.')
         
-        return IP(response.json()['ip'])
+        return IP(response.json()['ip'], is_private=False)
 
    

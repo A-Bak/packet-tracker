@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import List
+from typing import List, Dict, Union
 
 from dataclasses import dataclass, field
 from abc import ABC, abstractmethod
@@ -8,7 +8,8 @@ import os
 import dpkt
 import ipaddress
 
-from packettracker.ip import IP
+from packettracker.ip import IP, Location
+from packettracker.database import DatabaseConnection
 
 
 
@@ -30,31 +31,64 @@ class Packet:
         self.dst_ip = self._bytes_to_ip(self.ethernet.data.dst)
         
     def _bytes_to_ip(self, packet_bytes: str) -> IP:
-        try: 
-            return IP(ipaddress.IPv4Address(packet_bytes).compressed)
+        try:
+            ip = ipaddress.IPv4Address(packet_bytes)
+            return IP(ip.compressed, ip.is_private)
+        
         except ipaddress.AddressValueError:
-            return IP(ipaddress.IPv6Address(packet_bytes).compressed)
+            ip = ipaddress.IPv6Address(packet_bytes)
+            return IP(ip.compressed, ip.is_private)
         
     def __repr__(self) -> str:
         return f'Packet(type={self.ethernet.type}, src_ip={self.src_ip}, dst_ip={self.dst_ip})'
     
     
+@dataclass
 class PacketFile(ABC):
+    
+    packets: List[Packet]
+    
+    @abstractmethod
+    def localize_packets(self,
+                         db_connection: DatabaseConnection,
+                         private_to_public_dict: Dict[str, IP]) -> None:
+        """ Localize source and destination IPs in the list of packets. """
+        ...
     
     @classmethod
     @abstractmethod
     async def parse(cls, path_to_file: FilePath) -> PacketFile:
+        """ Parse a packet file and return instance of PacketFile. """
         ...
+        
         
         
 @dataclass
 class PcapFile(PacketFile):
-    
-    packets: List[Packet]
+        
+    def localize_packets(self,
+                         db_connection: DatabaseConnection,
+                         private_to_public_dict: Dict[str, IP]) -> None:
+        for packet in self.packets:
+            packet.src_ip.location = self.localize_ip(packet.src_ip,
+                                                      db_connection,
+                                                      private_to_public_dict)
+            packet.dst_ip.location = self.localize_ip(packet.dst_ip,
+                                                      db_connection,
+                                                      private_to_public_dict)
+        
+    def localize_ip(self,
+                    ip: IP,
+                    db_connection: DatabaseConnection,
+                    private_to_public_dict: Dict[str, IP]) -> Union[Location, None]:
+        if ip.is_private:
+            return db_connection.get_ip_location(private_to_public_dict[ip.address])
+        else:
+            return db_connection.get_ip_location(ip)
+                    
     
     @classmethod
     async def parse(cls, path_to_file: FilePath) -> PcapFile:
-        
         if not os.path.exists(path_to_file):
             raise FileNotFoundError(f'Packet file \'{path_to_file}\' was not found.')
         
