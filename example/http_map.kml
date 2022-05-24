@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+	<Style id="transBluePoly">
+	<LineStyle><width>1.5</width><color>501400E6</color></LineStyle>
+	</Style>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 145.253.2.203</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>7.0114,51.4444
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.253.2.203 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			7.0114,51.4444</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 216.239.59.99</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>216.239.59.99 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>216.239.59.99 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>216.239.59.99 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 216.239.59.99</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>216.239.59.99 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 216.239.59.99</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>145.254.160.237 --> 65.208.228.223</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>-97.822,37.751
+			10.6761,53.8617</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>65.208.228.223 --> 145.254.160.237</name>
+			<extrude>1</extrude>
+			<tessellate>1</tessellate>
+			<styleUrl>#transBluePoly</styleUrl>
+			<LineString>
+			<coordinates>10.6761,53.8617
+			-97.822,37.751</coordinates>
+			</LineString>
+		</Placemark>
+</Document>
+</kml>
