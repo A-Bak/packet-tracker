@@ -33,7 +33,7 @@ class GeoLite2Database(DatabaseConnection):
         
         except AddressNotFoundError:
             print(f'Address {ip.address} not found in the GeoLite2 City database.')
-            return Location(None, None)
+            return None
 
         
     
