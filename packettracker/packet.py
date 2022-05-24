@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import List, Dict, Union
+from typing import List, Dict, Optional, Union
 
 from dataclasses import dataclass, field
 from abc import ABC, abstractmethod
@@ -10,6 +10,7 @@ import ipaddress
 
 from packettracker.ip import IP, Location
 from packettracker.database import DatabaseConnection
+from packettracker.kml import PacketFileKMLEncoder
 
 
 
@@ -38,7 +39,7 @@ class Packet:
         except ipaddress.AddressValueError:
             ip = ipaddress.IPv6Address(packet_bytes)
             return IP(ip.compressed, ip.is_private)
-        
+                
     def __repr__(self) -> str:
         return f'Packet(type={self.ethernet.type}, src_ip={self.src_ip}, dst_ip={self.dst_ip})'
     
@@ -85,7 +86,6 @@ class PcapFile(PacketFile):
             return db_connection.get_ip_location(private_to_public_dict[ip.address])
         else:
             return db_connection.get_ip_location(ip)
-                    
     
     @classmethod
     async def parse(cls, path_to_file: FilePath) -> PcapFile:
@@ -99,5 +99,14 @@ class PcapFile(PacketFile):
             ip_packets = [Packet(p) for p in ethernet_packets if p.type == dpkt.ethernet.ETH_TYPE_IP]
 
             return PcapFile(ip_packets)
-        
     
+    def to_kml(self, path_to_file: FilePath = None) -> Optional[str]:
+        
+        kml_string = PacketFileKMLEncoder.encode(self)
+        
+        if path_to_file is not None:
+            with open(path_to_file, 'w') as f:
+                f.write(kml_string)
+        else:
+            return kml_string
+        

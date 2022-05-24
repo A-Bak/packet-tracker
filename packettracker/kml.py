@@ -40,16 +40,16 @@ class PacketFileKMLEncoder(KMLEncoder):
         if src_ip.location is None or dst_ip.location is None:
             raise IPLocationError('Failed conversion to KML. Location of an IP address is None.')
         
-        kml_body =  '<Placemark>\n'\
-                    f'<name>{src_ip.address} --> {dst_ip.address}</name>\n'\
-                    '<extrude>1</extrude>\n'\
-                    '<tessellate>1</tessellate>\n'\
-                    '<styleUrl>#transBluePoly</styleUrl>\n'\
-                    '<LineString>\n'\
-                    f'<coordinates>{dst_ip.location.lattitude},{dst_ip.location.longitude}\n'\
-                    f'{src_ip.location.lattitude},{src_ip.location.longitude}</coordinates>\n'\
-                    '</LineString>\n'\
-                    '</Placemark>\n'
+        kml_body =  '\t\t<Placemark>\n'\
+                    f'\t\t\t<name>{src_ip.address} --> {dst_ip.address}</name>\n'\
+                    '\t\t\t<extrude>1</extrude>\n'\
+                    '\t\t\t<tessellate>1</tessellate>\n'\
+                    '\t\t\t<styleUrl>#transBluePoly</styleUrl>\n'\
+                    '\t\t\t<LineString>\n'\
+                    f'\t\t\t<coordinates>{dst_ip.location.lattitude},{dst_ip.location.longitude}\n'\
+                    f'\t\t\t{src_ip.location.lattitude},{src_ip.location.longitude}</coordinates>\n'\
+                    '\t\t\t</LineString>\n'\
+                    '\t\t</Placemark>\n'
         return kml_body
         
     @classmethod
@@ -57,7 +57,9 @@ class PacketFileKMLEncoder(KMLEncoder):
         kml_header = '<?xml version="1.0" encoding="UTF-8"?> \n'\
                      '<kml xmlns="http://www.opengis.net/kml/2.2">\n'\
                      '<Document>\n'\
-                     '<Style id="transBluePoly"><LineStyle><width>1.5</width><color>501400E6</color></LineStyle></Style>'
+                     '\t<Style id="transBluePoly">\n'\
+                     '\t<LineStyle><width>1.5</width><color>501400E6</color></LineStyle>\n'\
+                     '\t</Style>\n'
         return kml_header
                 
     @classmethod
