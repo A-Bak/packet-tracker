@@ -5,16 +5,18 @@ from packettracker.ip import IP
 from packettracker.packet import Packet, PacketFile
 
 
+class FilePath(str):
+    pass
 
 
-def plot_gmap(public_ip: IP, packet_file: PacketFile) -> None:
+def plot_gmap(public_ip: IP, packet_file: PacketFile, output_file: FilePath) -> None:
     
     gmap = gmplot.GoogleMapPlotter(*public_ip.location, zoom=3)
 
     for p in packet_file.packets:
         plot_packet(gmap, p)
         
-    gmap.draw('out/map.html')
+    gmap.draw(output_file)
     
     
 def plot_packet(gmap: gmplot.GoogleMapPlotter, packet: Packet) -> None:

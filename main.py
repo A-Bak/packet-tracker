@@ -1,3 +1,4 @@
+import os
 import asyncio
 from collections import defaultdict
 
@@ -10,11 +11,12 @@ from packettracker.packet import PcapFile
 from packettracker.database import GeoLite2Database        
 
         
-API_KEY = 'AIzaSyDSd4hBp3rzSKBPbfTCQ3EgZmwb4neLUpc'
+
 
 async def main():
     
-    packet_traffic_file = 'example-packet-capture/http.pcap'
+    packet_traffic_file = 'example/http.pcap'
+    city_database_file = 'geolocation-database/GeoLite2-City/GeoLite2-City.mmdb'
     
     public_ip, pcap_file = await asyncio.gather(
         IPInfoAPI.get_public_ip(),
@@ -23,7 +25,6 @@ async def main():
     
     private_to_public_dict = defaultdict(lambda: public_ip)
 
-    city_database_file = 'geolocation-database/GeoLite2-City/GeoLite2-City.mmdb'
     with geoip2.database.Reader(city_database_file) as reader:
         
         db = GeoLite2Database(reader)
@@ -32,10 +33,11 @@ async def main():
         pcap_file.localize_packets(db, private_to_public_dict)
     
 
-    kml_file = 'out/map.kml'
+    kml_file = os.path.splitext(packet_traffic_file)[0] + '_map.kml'
     pcap_file.to_kml(path_to_file=kml_file)
     
-    packettracker.gmap.plot_gmap(public_ip, pcap_file)
+    html_file = os.path.splitext(packet_traffic_file)[0] + '_map.html'
+    packettracker.gmap.plot_gmap(public_ip, pcap_file, html_file)
 
 
 if __name__ == '__main__':
