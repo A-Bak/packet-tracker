@@ -14,7 +14,7 @@ from packettracker.database import GeoLite2Database
 
 async def main():
     
-    packet_traffic_file = 'example_packet_capture/small_sample.pcap'
+    packet_traffic_file = 'example-packet-capture/sample_traffic.pcap'
     
     public_ip, pcap_file = await asyncio.gather(
         IPInfoAPI.get_public_ip(),
@@ -29,11 +29,9 @@ async def main():
         db = GeoLite2Database(reader)
         pcap_file.localize_packets(db, private_to_public_dict)
     
-    kml_string = PacketFileKMLEncoder.encode(pcap_file)
 
-    output_fp = 'out/test.kml'
-    with open(output_fp, 'w') as f:
-        f.write(kml_string)
+    kml_file = 'out/map.kml'
+    pcap_file.to_kml(path_to_file=kml_file)
     
 
 

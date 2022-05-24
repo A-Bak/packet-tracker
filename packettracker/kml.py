@@ -1,7 +1,9 @@
+from __future__ import annotations
+from typing import Any, TYPE_CHECKING
 from abc import ABC, abstractmethod
-from typing import Any
 
-from packettracker.packet import Packet, PacketFile
+if TYPE_CHECKING:
+    from packettracker.packet import Packet, PacketFile
 
 
 
@@ -27,7 +29,10 @@ class PacketFileKMLEncoder(KMLEncoder):
         kml_string = cls.kml_header()
         
         for packet in packet_file.packets:
-            kml_string += cls.encode_packet(packet)
+            try:
+                kml_string += cls.encode_packet(packet)
+            except IPLocationError:
+                pass
             
         return kml_string + cls.kml_footer()
     

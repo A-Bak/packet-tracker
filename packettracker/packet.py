@@ -9,8 +9,8 @@ import dpkt
 import ipaddress
 
 from packettracker.ip import IP, Location
-from packettracker.database import DatabaseConnection
 from packettracker.kml import PacketFileKMLEncoder
+from packettracker.database import DatabaseConnection
 
 
 
@@ -61,6 +61,10 @@ class PacketFile(ABC):
     async def parse(cls, path_to_file: FilePath) -> PacketFile:
         """ Parse a packet file and return instance of PacketFile. """
         ...
+        
+    @abstractmethod
+    def to_kml(self, path_to_file: FilePath) -> Optional[str]:
+        """ Saves PacketFile as .kml document. Optionally returns KML string if path_to_file is None. """
         
         
         
