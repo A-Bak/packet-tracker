@@ -10,6 +10,9 @@ import requests
 class Location:
     lattitude: float
     longitude: float
+    
+    def __iter__(self):
+        return iter((self.lattitude, self.longitude))
 
 
 @dataclass
