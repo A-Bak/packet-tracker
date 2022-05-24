@@ -10,11 +10,11 @@ from packettracker.packet import PcapFile
 from packettracker.database import GeoLite2Database        
 
         
-
+API_KEY = 'AIzaSyDSd4hBp3rzSKBPbfTCQ3EgZmwb4neLUpc'
 
 async def main():
     
-    packet_traffic_file = 'example-packet-capture/sample_traffic.pcap'
+    packet_traffic_file = 'example-packet-capture/http.pcap'
     
     public_ip, pcap_file = await asyncio.gather(
         IPInfoAPI.get_public_ip(),
