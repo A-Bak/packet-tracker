@@ -51,8 +51,8 @@ class PacketFileKMLEncoder(KMLEncoder):
                     '\t\t\t<tessellate>1</tessellate>\n'\
                     '\t\t\t<styleUrl>#transBluePoly</styleUrl>\n'\
                     '\t\t\t<LineString>\n'\
-                    f'\t\t\t<coordinates>{dst_ip.location.lattitude},{dst_ip.location.longitude}\n'\
-                    f'\t\t\t{src_ip.location.lattitude},{src_ip.location.longitude}</coordinates>\n'\
+                    f'\t\t\t<coordinates>{dst_ip.location.longitude},{dst_ip.location.lattitude}\n'\
+                    f'\t\t\t{src_ip.location.longitude},{src_ip.location.lattitude}</coordinates>\n'\
                     '\t\t\t</LineString>\n'\
                     '\t\t</Placemark>\n'
         return kml_body
